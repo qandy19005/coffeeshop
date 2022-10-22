@@ -10,7 +10,7 @@
           <span>{{`$${coffee.smallCupPrice}(S)/$${coffee.mediumCupPrice}(M)/$${coffee.largeCupPrice}(L)`}}</span>
         </div>
         <div class="button-box">
-          <button class="btn" @click="addToCartEdit(coffee)">加入訂單</button>
+          <button class="btn add-button" @click="addToCartEdit(coffee)">加入訂單</button>
         </div>
     </div>
     <transition name="model-fade">

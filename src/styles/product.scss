@@ -154,12 +154,13 @@
   }
   .button-box{
     width: 45px;
-    button{
+    .add-button{
       cursor: pointer;
       background: #B76B2E;
       color: #3E2409;
       font-weight: 700;
       box-shadow: 1px 1px 0px #573109;
+      min-width: 45px;
     }
     button:hover{
       box-shadow: none;
@@ -234,4 +235,17 @@
   border: 1px solid;
   background: none;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 320px){
+  .cart-table-box{
+    .edit-coffee-box{
+      .edit-coffee-list{
+        width: fit-content;
+      }
+    }
+  }
+  .product-list{
+    width: fit-content;
+  }
 }
