@@ -1,0 +1,49 @@
+@import "~@/styles/_variables.scss";
+
+body{
+  margin: 0;
+  background: $background-main-color;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $text-main-color;
+}
+
+#nav {
+  display: flex;
+  height: 50px;
+  border-bottom: 2px solid #5E412F;
+  align-items: center;
+  background: #8F7463;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #C6C6C6;
+    flex: 50%;
+    transition: 0.3s all ease;
+
+    .nav-icon{
+      width: 20px;
+      position: relative;
+      top: 5px;
+      margin-left: 10px;
+    }
+    &.router-link-exact-active {
+      color: #512F14;
+      font-weight: 800;
+      transition: 0.3s all ease;
+      .nav-text{
+        position: relative;
+        top: -8px;
+        font-size: 1.5rem;
+      }
+      .nav-icon{
+        width: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+@import "~@/styles/_variables.scss";
+@mixin list-box() {
+  font-weight: 700;
+  border: 2px solid #696059;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #EDEDED;
+}
+
+@mixin list-hover() {
+  background: #E4CBB0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  right: 3px;
+  bottom: 1.5px;
+  border-bottom: none;
+  transition: 0.3s all ease;
+}
+
+.cart-table-box{
+  background: $background-main-color;
+  padding: 10px;
+  height: 90vh;
+  .coffee-cart-box{
+    @include list-box();
+    .coffee-cart-list{
+      display: flex;
+      align-items: center;
+      .image-box{
+        flex: 20%;
+        border-right: 1px solid #696059;
+        padding-right: 10px;
+        .coffee-image{
+          width: 50px;
+        }
+      }
+      .detail-box{
+        flex: 50%;
+      }
+      .price-box{
+        flex: 10%;
+        font-size: 22px;
+      }
+      .btn-group{
+        flex: 20%;
+        .edit-img{
+          width: 1.5rem;
+        }
+        .delete-img{
+          margin-top: 10px;
+          width: 1.5rem;
+        }
+      }
+    }
+    .coffee-note{
+      border-top: 1px solid #fff;
+      text-align: left;
+      .note-img{
+        width: 30px;
+        margin-right: 10px;
+        position: relative;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.cart-table-box{
+  .edit-coffee-box{
+    @include list-box();
+    .edit-coffee-list{
+      display: flex;
+      align-items: center;
+      .image-box{
+        flex: 20%;
+        border-right: 1px solid #696059;
+        padding-right: 10px;
+        .coffee-image{
+          width: 50px;
+        }
+      }
+      .info-box{
+        flex: 80%;
+        .input-amount{
+          margin-right: 10px;
+          text-align: center;
+          background: none;
+          border: 1px solid #535353;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+        .custom-radio{
+          accent-color : #317045;
+        }
+      }
+    }
+    .edit-footer{
+      margin-top: 5px;
+      border-top: 1px solid #ffffff;
+      display: flex;
+      align-items: center;
+      .note-box{
+        padding: 5px;
+        flex: 80%;
+        margin-top: 5px;
+        background: #C49A79;
+        border-radius: 5px;
+        color: #1C3150;
+      }
+      .note-box::placeholder{
+        color: #4D2F17;
+      }
+      .btn-group{
+        flex: 20%;
+        margin-top: 10px;
+        .check-image{
+          width: 1.5rem;
+        }
+        .cancle-image{
+          width: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+.product-table-box{
+  background: $background-main-color;
+  padding: 10px;
+  height: 90vh;
+}
+
+.product-list{
+  @include list-box();
+  display: flex;
+  align-items: center;
+  .image-box{
+    flex: 20%;
+    border-right: 1px solid #696059;
+    padding-right: 10px;
+    .populer-sign{
+      width: 35px;
+      position: absolute;
+      left: 18px;
+      margin: -20px;
+    }
+    .coffee-image{
+      width: 50px;
+    }
+  }
+  .info-box{
+    flex: 60%;
+  }
+  .button-box{
+    width: 45px;
+    button{
+      cursor: pointer;
+      background: #B76B2E;
+      color: #3E2409;
+      font-weight: 700;
+      box-shadow: 1px 1px 0px #573109;
+    }
+    button:hover{
+      box-shadow: none;
+    }
+  }
+}
+
+.coffee-cart-box:hover{
+  @include list-hover();
+}
+
+.product-list:hover{
+  @include list-hover();
+}
+
+.coffe-info{
+  font-weight: 700;
+  .coffee-name{
+    font-size: 20px;
+  }
+  .coffee-image{
+    width: 80px;
+  }
+  .coffee-size{
+    .custom-radio{
+      accent-color : #317045;
+    }
+  }
+
+  .coffee-price{
+    margin-bottom: 15px;
+    .input-amount{
+      text-align: center;
+      background: none;
+      border: 1px solid #535353;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .price-text{
+      font-size: 20px;
+      color: #353535;
+    }
+  }
+
+  .note-box{
+    padding: 5px;
+    background: #C49A79;
+    border-radius: 5px;
+    color: #1C3150;
+  }
+  .note-box::placeholder{
+    color: #4D2F17;
+  }
+}
+
+.btn-group{
+  .add-btn{
+    cursor: pointer;
+    margin-right:10px;
+    font-weight: 700;
+    color: #3E2409;
+    background: #B76B2E;
+  }
+  .cancel-btn{
+    cursor: pointer;
+    background: #D0D0D0;
+    font-weight: 700;
+  }
+}
+
+.btn{
+  border: 1px solid;
+  background: none;
+  border-radius: 5px;
+}

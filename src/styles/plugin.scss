@@ -1,0 +1,14 @@
+.Vue-Toastification__toast--default.my-custom-toast-class {
+  background-color: #E5A06F;
+}
+.Vue-Toastification__toast-body.custom-class {
+  font-size: 15px;
+}
+@media only screen and (max-width: 600px){
+  .Vue-Toastification__container .Vue-Toastification__toast {
+    width: 50px !important;
+    height: 30px;
+    right: -100px;
+    border-radius: 15px;
+  }
+}
